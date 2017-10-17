@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import './sass/main.scss';
+import './styles/app.css';
 
 import { HomeComponent } from './components/home';
 import { AboutComponent } from './components/about';
