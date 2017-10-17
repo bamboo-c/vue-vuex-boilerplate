@@ -1,8 +1,8 @@
 {
-  "name": "{{ name }}",
-  "description": "{{ description }}",
+  "name": "vue-vuex-boilerplate",
+  "description": "Vue 2, Vuex, Webpack 3 and Typescript 2 setup setting.",
   "version": "1.0.0",
-  "author": "{{ author }}",
+  "author": "bamboo-c",
   "private": true,
   "engines": {
     "node": ">=6",
