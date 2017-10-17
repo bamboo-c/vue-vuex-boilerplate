@@ -1,4 +1,4 @@
-let config = {
+module.exports = {
   parser: 'sugarss',
   plugins: {
     'postcss-import': {},
@@ -6,5 +6,3 @@ let config = {
     'cssnano': {}
   }
 }
-
-module.exports = config;
