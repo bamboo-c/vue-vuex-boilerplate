@@ -13,9 +13,6 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
       {
         loader: 'css-loader'
       },
-      {
-        loader: 'sass-loader'
-      }
     ]
   },
   {

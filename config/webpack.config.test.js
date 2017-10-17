@@ -21,16 +21,13 @@ webpackConfig.module.rules = [{
     exclude: ['./src/index.html']
   },
   {
-    test: /\.scss$/,
+    test: /\.css$/,
     use: [{
         loader: 'style-loader'
       },
       {
         loader: 'css-loader'
       },
-      {
-        loader: 'sass-loader'
-      }
     ]
   },
   {

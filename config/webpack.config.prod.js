@@ -12,7 +12,7 @@ const glob = require('glob'),
   DefinePlugin = require('webpack/lib/DefinePlugin'),
   env = require('../environment/prod.env');
 
-const extractSass = new ExtractTextPlugin({
+const extractCss = new ExtractTextPlugin({
   filename: 'css/[name].[contenthash].css',
   disable: process.env.NODE_ENV === 'development'
 });
@@ -27,8 +27,8 @@ const purifyCss = new PurifyCSSPlugin({
 
 webpackConfig.module.rules = [...webpackConfig.module.rules,
   {
-    test: /\.scss$/,
-    use: extractSass.extract({
+    test: /\.css$/,
+    use: extractCSS.extract({
       use: [{
           loader: 'css-loader',
           options: {
@@ -43,14 +43,6 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
             plugins: () => [autoprefixer]
           }
         },
-        {
-          loader: 'sass-loader',
-          options: {
-            outputStyle: 'expanded',
-            sourceMap: true,
-            sourceMapContents: true
-          }
-        }
       ],
       // use style-loader in development
       fallback: 'style-loader'
@@ -72,7 +64,7 @@ webpackConfig.module.rules[0].options = {
 };
 
 webpackConfig.plugins = [...webpackConfig.plugins,
-  extractSass,
+  extractCss,
   purifyCss,
   new HtmlWebpackPlugin({
     inject: true,
