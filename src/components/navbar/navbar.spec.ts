@@ -22,23 +22,6 @@ describe('Navbar component', () => {
   let directiveTest: ComponentTest;
   let router: VueRouter;
 
-  before(() => {
-    Vue.use(VueRouter);
-    directiveTest = new ComponentTest('<div><navbar></navbar><router-view>loading...</router-view></div>', { 'navbar': MockNavbarComponent });
-
-    let homeComponent = { template: '<div class="home">Home</div>' };
-    let aboutComponent = { template: '<div class="about">About</div>' };
-    let listComponent = { template: '<div class="list">List</div>' };
-
-    router = new VueRouter({
-      routes: [
-        { path: '/', component: homeComponent },
-        { path: '/about', component: aboutComponent },
-        { path: '/list', component: listComponent }
-      ]
-    });
-  });
-
   it('should render correct contents', async () => {
     directiveTest.createComponent({ router: router });
 
