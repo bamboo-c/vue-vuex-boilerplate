@@ -8,8 +8,8 @@ import './home.css';
 })
 export class HomeComponent extends Vue {
 
-    package: string = 'vue-webpack-typescript';
-    repo: string = 'https://github.com/ducksoupdev/vue-webpack-typescript';
+    package: string = 'vue-vuex-boilerplate';
+    repo: string = 'https://github.com/bamboo-c/vue-vuex-boilerplate';
     mode: string = process.env.ENV;
 
 }
