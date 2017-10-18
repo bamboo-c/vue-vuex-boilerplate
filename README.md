@@ -6,32 +6,29 @@ Vue 2, Vuex, Webpack 3 and Typescript 2 setup setting.
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn run dev
 
 # lint the Typescript
-npm run lint
+yarn run lint
 
 # run the tests
-npm test
+yarn test
 
 # run the tests on changes
-npm run test:watch
-
-# run the test suite and generate a coverage report
-npm run coverage
+yarn run test:watch
 
 # run the tests on Teamcity
-npm run ci:teamcity
+yarn run ci:teamcity
 
 # run the tests on Jenkins
-npm run ci:jenkins
+yarn run ci:jenkins
 
 # build for production with minification
-npm run build
+yarn run build
 
 # clean the production build
-npm run clean
+yarn run clean
 ```
