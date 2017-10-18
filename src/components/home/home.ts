@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-import './home.scss';
+import './home.css';
 
 @Component({
     template: require('./home.html')

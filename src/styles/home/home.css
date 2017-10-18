@@ -1,7 +1,9 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "";
 
-@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+html, body {
+  background-color: --gley;
 
-html, body, #app-main {
-    height: 100%;
+  #app-main {
+    background-color: --white;
+  }
 }
