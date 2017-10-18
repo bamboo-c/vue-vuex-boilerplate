@@ -29,6 +29,12 @@ yarn run ci:jenkins
 # build for production with minification
 yarn run build
 
+# watch css
+yarn run css:watch
+
+# build css
+yarn run css:build
+
 # clean the production build
 yarn run clean
 ```
