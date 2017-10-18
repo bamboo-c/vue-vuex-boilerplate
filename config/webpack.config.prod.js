@@ -90,7 +90,12 @@ webpackConfig.plugins = [...webpackConfig.plugins,
   }),
   new CompressionPlugin({
     asset: '[path].gz[query]',
-    test: /\.min\.js$/
+    test: /\.min\.js$/,
+    exclude: [
+      './node_modules/',
+      './typings/',
+      './**/\.spec\.ts$/'
+    ],
   }),
   new DefinePlugin({
     'process.env': env

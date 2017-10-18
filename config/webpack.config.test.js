@@ -6,7 +6,10 @@ var webpack = require('webpack'),
 
 webpackConfig.module.rules = [{
     test: /\.ts$/,
-    exclude: /node_modules/,
+    exclude: [
+      './node_modules/',
+      './typings/'
+    ],
     loader: 'awesome-typescript-loader',
     query: {
       compilerOptions: {

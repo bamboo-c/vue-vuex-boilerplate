@@ -6,8 +6,8 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
     enforce: 'post',
     loader: 'istanbul-instrumenter-loader',
     exclude: [
-      'node_modules',
-      /\.spec\.ts$/
+      './node_modules/',
+      './typings/'
     ],
     query: {
       esModules: true
