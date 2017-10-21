@@ -1,9 +1,0 @@
-@import "";
-
-html, body {
-  background-color: --gley;
-
-  #app-main {
-    background-color: --white;
-  }
-}
