@@ -1,27 +1,36 @@
-<template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
-</template>
+import { spy, assert } from 'sinon';
+import { expect } from 'chai';
+import Component from 'vue-class-component';
+import { ComponentTest, MockLogger } from '../../util/component-test';
+import { AboutComponent } from './about';
 
-<style>
-body {
-  margin: 0;
-  font-size: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont,
-               'avenir next', avenir,
-               helvetica, 'helvetica neue',
-               Ubuntu,
-               'segoe ui', arial,
-               sans-serif;
-}
-.page {
-  text-align: center;
-  /* nesting for the need to test postcss */
-  code {
-    background-color: #f0f0f0;
-    padding: 3px 5px;
-    border-radius: 2px;
+let loggerSpy = spy();
+
+@Component({
+  template: require('./about.html')
+})
+class MockAboutComponent extends AboutComponent {
+  constructor() {
+    super();
+    this.logger = new MockLogger(loggerSpy);
   }
 }
-</style>
+
+describe('About component', () => {
+  let directiveTest: ComponentTest;
+
+  beforeEach(() => {
+    directiveTest = new ComponentTest('<div><about></about></div>', { 'about': MockAboutComponent });
+  });
+
+  it('should render correct contents', async () => {
+    debugger;
+    directiveTest.createComponent();
+
+    await directiveTest.execute((vm) => {
+      expect(vm.$el.querySelector('.repo-link').getAttribute('href')).to.equal('https://github.com/ducksoupdev/vue-webpack-typescript');
+      assert.calledWith(loggerSpy, 'about is ready!');
+    });
+  });
+});
+
