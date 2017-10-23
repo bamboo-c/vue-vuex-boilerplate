@@ -3,7 +3,7 @@ const helpers = require('./helpers'),
 
 let config = {
   entry: {
-    'main': helpers.root('/src/main.ts')
+    'main': helpers.root('/src/index.ts')
   },
   output: {
     path: helpers.root('/dist'),
@@ -34,13 +34,7 @@ let config = {
         exclude: ['./src/index.html']
       }
     ],
-  },
-  plugins: [
-    new CopyWebpackPlugin([{
-      from: 'src/assets',
-      to: './assets'
-    }, ]),
-  ]
+  }
 };
 
 module.exports = config;
