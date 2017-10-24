@@ -11,6 +11,7 @@ Vue.use(VueRouter);
 let router = new VueRouter({
   routes: [
     { path: '/', component: AppContainer }
+    { path: '/list', component: ListContainer }
   ]
 });
 
