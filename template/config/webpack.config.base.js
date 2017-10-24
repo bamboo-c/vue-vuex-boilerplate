@@ -3,7 +3,7 @@ const helpers = require('./helpers'),
 
 let config = {
   entry: {
-    'main': helpers.root('/src/index.tsx')
+    'main': helpers.root('/src/main.ts')
   },
   output: {
     path: helpers.root('/dist'),
