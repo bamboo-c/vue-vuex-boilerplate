@@ -5,7 +5,7 @@ import Component from 'vue-class-component';
 @Component({
   template: require('./index.html')
 })
-export class HomeComponent extends Vue {
+export class AppContainer extends Vue {
 
   package: string = 'vue-webpack-typescript';
   repo: string = 'https://github.com/ducksoupdev/vue-webpack-typescript';
