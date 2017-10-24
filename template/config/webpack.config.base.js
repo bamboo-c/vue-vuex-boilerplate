@@ -3,7 +3,7 @@ const helpers = require('./helpers'),
 
 let config = {
   entry: {
-    'main': helpers.root('/src/index.ts')
+    'main': helpers.root('/src/index.tsx')
   },
   output: {
     path: helpers.root('/dist'),
@@ -11,7 +11,7 @@ let config = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.js', '.html'],
+    extensions: ['.ts', '.tsx', '.js', '.html'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
     }
