@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Component, Watch } from 'vue-property-decorator';
 import { Link } from './Link';
-import { Logger } from '../../../util/log';
+import { Logger } from '../../../utils/log';
 
 @Component({
     template: require('./navbar.html')

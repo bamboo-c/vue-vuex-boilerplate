@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import './styles/main.scss';
 
 import { AppContainer } from './components/containers/App/';
+import { ListContainer } from './components/containers/List/';
 
 // register the plugin
 Vue.use(VueRouter);

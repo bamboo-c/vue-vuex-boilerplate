@@ -1,12 +1,12 @@
 import Component from 'vue-class-component';
 import { expect } from 'chai';
-import { ComponentTest } from '../../util/component-test';
-import { ListComponent } from './list';
+import { ComponentTest } from '../../../utils/component-test';
+import { ListContainer } from './';
 
 @Component({
   template: require('./list.html')
 })
-class MockListComponent extends ListComponent {
+class MockListContainer extends ListContainer {
   constructor() {
     super();
     this.axios = {
@@ -21,7 +21,7 @@ describe('List component', () => {
   let directiveTest: ComponentTest;
 
   beforeEach(() => {
-    directiveTest = new ComponentTest('<div><list></list></div>', { 'list': MockListComponent });
+    directiveTest = new ComponentTest('<div><list></list></div>', { 'list': MockContainer });
   });
 
   it('should render correct contents', async () => {
