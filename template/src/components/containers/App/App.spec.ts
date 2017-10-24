@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { App } from './App;
-import { ComponentTest } from '../../utils/component-test';
+import { App } from './AppContainer';
+import { ComponentTest } from '../../../utils/component-test';
 
 describe('Home component', () => {
   let directiveTest: ComponentTest;
