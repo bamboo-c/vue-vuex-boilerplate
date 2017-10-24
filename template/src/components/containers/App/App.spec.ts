@@ -1,36 +1,21 @@
-import { spy, assert } from 'sinon';
 import { expect } from 'chai';
-import Component from 'vue-class-component';
-import { ComponentTest, MockLogger } from '../../util/component-test';
-import { AboutComponent } from './about';
+import { App } from './App;
+import { ComponentTest } from '../../utils/component-test';
 
-let loggerSpy = spy();
-
-@Component({
-  template: require('./about.html')
-})
-class MockAboutComponent extends AboutComponent {
-  constructor() {
-    super();
-    this.logger = new MockLogger(loggerSpy);
-  }
-}
-
-describe('About component', () => {
+describe('Home component', () => {
   let directiveTest: ComponentTest;
 
   beforeEach(() => {
-    directiveTest = new ComponentTest('<div><about></about></div>', { 'about': MockAboutComponent });
+    directiveTest = new ComponentTest('<div><app></app></div>', { 'app': App });
   });
 
   it('should render correct contents', async () => {
-    debugger;
     directiveTest.createComponent();
-
     await directiveTest.execute((vm) => {
-      expect(vm.$el.querySelector('.repo-link').getAttribute('href')).to.equal('https://github.com/ducksoupdev/vue-webpack-typescript');
-      assert.calledWith(loggerSpy, 'about is ready!');
+      debugger;
+      const mode = process.env.ENV;
+      expect(vm.$el.querySelector('.mode').textContent).to.equal(`${mode} mode`);
+      expect(vm.$el.querySelector('.package').textContent).to.equal('vue-webpack-typescript');
     });
   });
 });
-

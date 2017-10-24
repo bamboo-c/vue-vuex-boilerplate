@@ -11,5 +11,10 @@ Vue.use(VueRouter);
 let router = new VueRouter({
   routes: [
     { path: '/', component: App }
+  ]
 });
 
+new Vue({
+  el: '#app-main',
+  router: router,
+});
