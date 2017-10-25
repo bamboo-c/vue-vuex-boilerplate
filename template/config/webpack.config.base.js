@@ -11,7 +11,7 @@ let config = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.html'],
+    extensions: ['.ts', '.js', '.html'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
     }
@@ -34,7 +34,13 @@ let config = {
         exclude: ['./src/index.html']
       }
     ],
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: 'src/assets',
+      to: './assets'
+    }, ]),
+  ]
 };
 
 module.exports = config;

@@ -5,7 +5,7 @@ import './styles/main.scss';
 
 import { AppContainer } from './components/containers/App/';
 import { ListContainer } from './components/containers/List/';
-import { NavbarContainer } from './components/containers/Navbar/;
+import { NavbarContainer } from './components/containers/Navbar/';
 
 // register the plugin
 Vue.use(VueRouter);
