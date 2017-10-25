@@ -1,34 +1,21 @@
-<template>
-  <div class="counter-wrapper">
-    <div class="counter">
-      \{{ count }}
-    </div>
-    <button @click="$store.commit('INCREMENT')">Increment</button>
-    <button @click="$store.commit('DECREMENT')">Decrement</button>
-    <button @click="$store.dispatch('incrementAsync')">Increment Async</button>
-  </div>
-</template>
+import { expect } from 'chai';
+import { Button } from './';
+import { ComponentTest } from '../../../utils/component-test';
 
-<script>
-export default {
-  computed: {
-    count() {
-      return this.$store.state.count
-    }
-  }
-}
-</script>
+describe('Button component', () => {
+  let directiveTest: ComponentTest;
 
-<style>
-.counter {
-  margin: 100px auto;
-  border-radius: 3px;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  font-size: 5rem;
-  background-color: #f0f0f0;
-  user-select: none;
-}
-</style>
+  beforeEach(() => {
+    directiveTest = new ComponentTest('<div><button></button></div>', { 'button': Button });
+  });
+
+  it('should render correct contents', async () => {
+    directiveTest.createComponent();
+    await directiveTest.execute((vm) => {
+      debugger;
+      const mode = process.env.ENV;
+      expect(vm.$el.querySelector('.mode').textContent).to.equal(`${mode} mode`);
+      expect(vm.$el.querySelector('.package').textContent).to.equal('vue-webpack-typescript');
+    });
+  });
+});

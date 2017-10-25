@@ -3,9 +3,15 @@ import VueRouter from 'vue-router';
 
 import './styles/main.scss';
 
+// conatiners
 import { AppContainer } from './components/containers/App/';
 import { ListContainer } from './components/containers/List/';
-import { NavbarContainer } from './components/containers/Navbar/';
+
+// modules
+import { Navbar } from './components/modules/Navbar/';
+
+// ui
+import { Button } from './components/ui/Button/';
 
 // register the plugin
 Vue.use(VueRouter);
@@ -21,6 +27,6 @@ new Vue({
   el: '#app-main',
   router: router,
   components: {
-    'navbar': NavbarContainer
+    'navbar': Navbar
   }
 });

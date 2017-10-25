@@ -4,14 +4,14 @@ import Component from 'vue-class-component';
 import { spy, assert } from 'sinon';
 import { expect } from 'chai';
 import { ComponentTest, MockLogger } from '../../../utils/component-test';
-import { NavbarContainer } from './';
+import { Navbar } from './';
 
 let loggerSpy = spy();
 
 @Component({
   template: require('./navbar.html')
 })
-class MockNavbarContainer extends NavbarContainer {
+class MockNavbar extends Navbar {
   constructor() {
     super();
     this.logger = new MockLogger(loggerSpy);
@@ -24,7 +24,7 @@ describe('Navbar component', () => {
 
   before(() => {
     Vue.use(VueRouter);
-    directiveTest = new ComponentTest('<div><navbar></navbar><router-view>loading...</router-view></div>', { 'navbar': MockNavbarContainer });
+    directiveTest = new ComponentTest('<div><navbar></navbar><router-view>loading...</router-view></div>', { 'navbar': MockNavbar });
 
     let AppContainer = { template: '<div class="app">Home</div>' };
     let ListContainer = { template: '<div class="list">List</div>' };
