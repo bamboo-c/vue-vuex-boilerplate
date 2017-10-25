@@ -21,7 +21,7 @@ describe('List component', () => {
   let directiveTest: ComponentTest;
 
   beforeEach(() => {
-    directiveTest = new ComponentTest('<div><list></list></div>', { 'list': MockContainer });
+  directiveTest = new ComponentTest('<div><list></list></div>', { 'list': MockListContainer });
   });
 
   it('should render correct contents', async () => {

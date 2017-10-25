@@ -4,7 +4,7 @@ import Component from 'vue-class-component';
 import { spy, assert } from 'sinon';
 import { expect } from 'chai';
 import { ComponentTest, MockLogger } from '../../../utils/component-test';
-import { NavbarContainer } from './Navbar';
+import { NavbarContainer } from './';
 
 let loggerSpy = spy();
 
