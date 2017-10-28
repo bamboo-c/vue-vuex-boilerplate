@@ -6,7 +6,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "common/_style";
 // foundation
 @import "foundation/_normalize";
+// components
+@import "components/containers/App/_style";
 
-html, body, #app-main {
-    height: 100%;
-}
+@import "components/modules/Navbar/_style";
