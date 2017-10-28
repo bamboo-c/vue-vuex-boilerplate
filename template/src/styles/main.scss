@@ -1,7 +1,3 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-
-@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
 // common
 @import "common/_style";
 // foundation
@@ -10,3 +6,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "components/containers/App/_style";
 
 @import "components/modules/Navbar/_style";
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
