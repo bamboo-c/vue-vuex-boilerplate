@@ -2,8 +2,10 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+// common
+@import "common/_style";
 // foundation
-@import "foundation/normalize"
+@import "foundation/_normalize";
 
 html, body, #app-main {
     height: 100%;
