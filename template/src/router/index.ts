@@ -19,12 +19,12 @@ const router = new VueRouter({
   routes: [{
     name: 'root',
     path: '/',
-    redirect: 'app',
+    redirect: 'index',
   }, {
     component: AppContainer,
     name: 'app',
-    path: '/',
-  }, { 
+    path: '/index',
+  }, {
     component: ListContainer,
     name: 'list',
     path: '/list',
