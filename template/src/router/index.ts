@@ -14,9 +14,21 @@ import { Button } from '../components/ui/Button/';
 // register the plugin
 Vue.use(VueRouter);
 
-let router = new VueRouter({
-  routes: [
-    { path: '/', component: AppContainer },
-    { path: '/list', component: ListContainer }
-  ]
+const router = new VueRouter({
+  mode: 'history',
+  routes: [{
+    name: 'root',
+    path: '/',
+    redirect: 'app',
+  }, {
+    component: AppContainer,
+    name: 'app',
+    path: '/',
+  }, { 
+    component: ListContainer,
+    name: 'list',
+    path: '/list',
+  },],
 });
+
+export default router;
