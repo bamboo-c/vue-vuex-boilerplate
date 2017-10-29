@@ -4,9 +4,9 @@ import {State} from './state';
 
 
 const actions: ActionTree<State,State> = {
-    [MutationTypes.COUNT_UP]: ({commit}) => {
-        commit(MutationTypes.COUNT_UP);
-    },
+  [MutationTypes.INCREMENT_VALUE]: ({commit}) => {
+    commit(MutationTypes.INCREMENT_VALUE);
+  },
 };
 
 export default actions;
