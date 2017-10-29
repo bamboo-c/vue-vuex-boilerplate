@@ -3,12 +3,12 @@
 
 export class State {
 
-    public count: number;
+  public count: number;
 
-    // state initializer
-    constructor() {
-        this.count = 0;
-    }
+  // state initializer
+  constructor() {
+    this.count = 0;
+  }
 }
 
 const state = new State();
