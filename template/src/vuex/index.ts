@@ -1,7 +1,7 @@
-import Vue = require('vue');
-import Vuex = require('vuex');
+import Vue from 'vue';
+import Vuex from 'vuex';
 import actions from './actions/index';
-import getters from './getters/index';
+import getters from './getter/index';
 import mutations from './mutations/index';
 import states from './states/index';
 
@@ -19,7 +19,6 @@ const store = new Vuex.Store({
     actions,
     mutations,
     getters,
-    strict: prod,
 });
 
 export default store;

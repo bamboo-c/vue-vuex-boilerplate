@@ -1,6 +1,6 @@
 import {ActionTree} from 'vuex';
-import {MutationTypes} from './mutation-types/index';
-import {State} from './state/index';
+import {MutationTypes} from '../mutation-types/index';
+import {State} from '../states/index';
 
 
 const actions: ActionTree<State,State> = {

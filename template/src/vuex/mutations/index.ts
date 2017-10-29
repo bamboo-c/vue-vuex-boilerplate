@@ -1,6 +1,6 @@
 import {MutationTree} from 'vuex';
-import {MutationTypes} from './mutation-types/index';
-import {State} from './state/index';
+import {MutationTypes} from '../mutation-types/index';
+import {State} from '../states/index';
 
 // mutations are operations that actually mutates the state.
 // each mutation handler gets the entire state tree as the
