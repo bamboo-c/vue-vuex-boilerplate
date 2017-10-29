@@ -1,6 +1,6 @@
 import {MutationTree} from 'vuex';
-import {MutationTypes} from './mutation-types';
-import {State} from './state';
+import {MutationTypes} from './mutation-types/index';
+import {State} from './state/index';
 
 // mutations are operations that actually mutates the state.
 // each mutation handler gets the entire state tree as the
@@ -8,9 +8,15 @@ import {State} from './state';
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations : MutationTree<State> = {
-    [MutationTypes.COUNT_UP]: (state: State) => {
-        state.count += 1;
-    },
+  [MutationTypes.INCREMENT_VALUE]: (state: State) => {
+    state.count += 1;
+  },
+  [MutationTypes.DECREMENT_VALUE]: (state: State) => {
+    state.count -= 1;
+  },
+  [MutationTypes.RESET_VALUE]: (state: State) => {
+    state.count = 0;
+  },
 };
 
 export default mutations;
