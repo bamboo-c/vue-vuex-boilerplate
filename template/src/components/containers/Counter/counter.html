@@ -1,10 +1,6 @@
 <div id="counter" class="flex flex-column">
-  <button @click="decrementValue" class="button-reset bg-blue ba b--black ph4 pv3 mb2 white f4 dim">Decrement Counter Value</button>
-  <button @click="incrementValue" class="button-reset bg-green ba b--black ph4 pv3 mb2 white f4 dim">Increments Counter Value</button>
-  <button @click="resetValue" class="button-reset bg-red ba b--black ph4 pv3 mb2 white f4 dim">Reset Counter Value</button>
-  <div class="f2 tc pa4 mv4 bg-light-gray ba b--light-silver">{{counter}}</div>
-    <div class="ph4 pv4 ba b--black-20">
-    <input type="text" v-model="firstName" placeholder="First Name" class="input-reset ba b--black-10 ph4 pv3" />
-    <button @click="logName" class="button-reset pv3 ph2 bg-white ba b--black-20">Log User Name</button>
-  </div>
+  <button @click="decrementValue" class="btn btn-danger">Decrement Counter Value</button>
+  <button @click="incrementValue" class="btn btn-success">Increments Counter Value</button>
+  <button @click="resetValue" class="btn btn-default">Reset Counter Value</button>
+  <p class="lead">{{counter}}</p>
 </div>
