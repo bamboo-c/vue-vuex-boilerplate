@@ -3,7 +3,7 @@ import Component from 'vue-class-component';
 
 
 @Component({
-  template: require('./index.html')
+  template: require('./app.html')
 })
 export class AppContainer extends Vue {
 
