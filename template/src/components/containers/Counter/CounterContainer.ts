@@ -9,11 +9,14 @@ import {MutationTypes} from '../../vuex/mutation-types/index';
   template: require('./counter.html'),
 })
 export class Counter extends Vue {
-  private back() {
-    this.$router.back();
+  private incrementValue() {
+    this.$store.dispatch(MutationTypes.INCREMENT_VALUE);
   }
-  private countUp() {
-    this.$store.dispatch(MutationTypes.COUNT_UP);
+  private decrementValue() {
+    this.$store.dispatch(MutationTypes.DECREMENT_VALUE);
+  }
+  private resetValue() {
+    this.$store.dispatch(MutationTypes.RESET_VALUE);
   }
   get count() {
     return this.$store.state.count;
