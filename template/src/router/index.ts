@@ -20,10 +20,11 @@ const router = new VueRouter({
     name: 'root',
     path: '/',
     redirect: 'index',
-  }, {
     component: AppContainer,
-    name: 'app',
-    path: '/index',
+  }, {
+    component: Counter,
+    name: 'counter',
+    path: '/counter',
   }, {
     component: ListContainer,
     name: 'list',
