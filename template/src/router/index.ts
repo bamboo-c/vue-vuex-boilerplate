@@ -18,10 +18,9 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   mode: 'history',
   routes: [{
-    name: 'root',
-    path: '/',
-    redirect: 'index',
     component: AppContainer,
+    name: 'index',
+    path: '/',
   }, {
     component: CounterContainer,
     name: 'counter',
