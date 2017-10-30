@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 // conatiners
 import { AppContainer } from '../components/containers/App/';
+import { CounterContainer } from '../components/containers/Counter/';
 import { ListContainer } from '../components/containers/List/';
 
 // modules
@@ -22,7 +23,7 @@ const router = new VueRouter({
     redirect: 'index',
     component: AppContainer,
   }, {
-    component: Counter,
+    component: CounterContainer,
     name: 'counter',
     path: '/counter',
   }, {
