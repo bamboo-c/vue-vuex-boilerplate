@@ -1,6 +1,6 @@
 import Component from 'vue-class-component';
-import Vue  = require('vue');
-import {MutationTypes} from '../../vuex/mutation-types/index';
+import Vue from 'vue';
+import {MutationTypes} from '../../../vuex/mutation-types/index';
 /**
  * Counter Component Vuex used
  */
@@ -8,7 +8,7 @@ import {MutationTypes} from '../../vuex/mutation-types/index';
   name: 'counter',
   template: require('./counter.html'),
 })
-export class Counter extends Vue {
+export class CounterContainer extends Vue {
   private incrementValue() {
     this.$store.dispatch(MutationTypes.INCREMENT_VALUE);
   }
