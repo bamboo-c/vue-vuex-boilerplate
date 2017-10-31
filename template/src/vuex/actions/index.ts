@@ -16,8 +16,8 @@ const actions: ActionTree<State,State> = {
   },
 
   // list
-  [MutationTypes.LODING_LIST]: ({commit}) => {
-    commit(MutationTypes.LODING_LIST);
+  [MutationTypes.LOAD_LIST]: ({commit}) => {
+    commit(MutationTypes.LOAD_LIST);
   },
 };
 

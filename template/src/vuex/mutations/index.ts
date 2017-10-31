@@ -17,6 +17,11 @@ const mutations : MutationTree<State> = {
   [MutationTypes.RESET_VALUE]: (state: State) => {
     state.count = 0;
   },
+
+  // list
+  [MutationTypes.LOAD_LIST]: (state: State) => {
+    
+  }
 };
 
 export default mutations;
