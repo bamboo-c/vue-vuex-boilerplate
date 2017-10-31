@@ -1,6 +1,7 @@
 import {MutationTree} from 'vuex';
 import {MutationTypes} from '../mutation-types/index';
 import {State} from '../states/index';
+import axios, {AxiosResponse} from 'axios';
 
 interface UserResponse {
   id: string;

@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import axios, {AxiosResponse} from 'axios';
 import {MutationTypes} from '../../../vuex/mutation-types/index';
 
 @Component({
