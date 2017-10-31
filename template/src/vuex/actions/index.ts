@@ -4,6 +4,7 @@ import {State} from '../states/index';
 
 
 const actions: ActionTree<State,State> = {
+  // counter
   [MutationTypes.INCREMENT_VALUE]: ({commit}) => {
     commit(MutationTypes.INCREMENT_VALUE);
   },
@@ -12,6 +13,11 @@ const actions: ActionTree<State,State> = {
   },
   [MutationTypes.RESET_VALUE]: ({commit}) => {
     commit(MutationTypes.RESET_VALUE);
+  },
+
+  // list
+  [MutationTypes.LODING_LIST]: ({commit}) => {
+    commit(MutationTypes.LODING_LIST);
   },
 };
 
