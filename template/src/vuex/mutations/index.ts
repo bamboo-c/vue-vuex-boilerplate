@@ -8,6 +8,7 @@ interface UserResponse {
   name: string;
 }
 const mutations : MutationTree<State> = {
+  // counter
   [MutationTypes.INCREMENT_VALUE]: (state: State) => {
     state.count += 1;
   },
@@ -18,6 +19,14 @@ const mutations : MutationTree<State> = {
     state.count = 0;
   },
 
+  items: UserResponse[] = [];
+  private url = 'https://jsonplaceholder.typicode.com/users';
+  protected axios;
+
+  constructor() {
+    super();
+    this.axios = axios;
+  }
   // list
   [MutationTypes.LOAD_LIST]: (state: State) => {
   

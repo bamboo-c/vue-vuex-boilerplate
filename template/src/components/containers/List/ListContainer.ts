@@ -7,14 +7,6 @@ import {MutationTypes} from '../../../vuex/mutation-types/index';
 })
 export class ListContainer extends Vue {
 
-  items: UserResponse[] = [];
-  private url = 'https://jsonplaceholder.typicode.com/users';
-  protected axios;
-
-  constructor() {
-    super();
-    this.axios = axios;
-  }
 
   mounted() {
     this.$nextTick(() => {
