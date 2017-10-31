@@ -11,6 +11,7 @@ sync(store, router)
 
 new Vue({
   el: '#app-main',
+  store,
   router: router,
   components: {
     'navbar': Navbar
