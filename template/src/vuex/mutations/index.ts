@@ -2,11 +2,10 @@ import {MutationTree} from 'vuex';
 import {MutationTypes} from '../mutation-types/index';
 import {State} from '../states/index';
 
-// mutations are operations that actually mutates the state.
-// each mutation handler gets the entire state tree as the
-// first argument, followed by additional payload arguments.
-// mutations must be synchronous and can be recorded by plugins
-// for debugging purposes.
+interface UserResponse {
+  id: string;
+  name: string;
+}
 const mutations : MutationTree<State> = {
   [MutationTypes.INCREMENT_VALUE]: (state: State) => {
     state.count += 1;
@@ -20,7 +19,7 @@ const mutations : MutationTree<State> = {
 
   // list
   [MutationTypes.LOAD_LIST]: (state: State) => {
-    
+  
   }
 };
 

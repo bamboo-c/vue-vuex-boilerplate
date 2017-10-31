@@ -3,11 +3,6 @@ import Component from 'vue-class-component';
 import axios, {AxiosResponse} from 'axios';
 import {MutationTypes} from '../../../vuex/mutation-types/index';
 
-interface UserResponse {
-  id: string;
-  name: string;
-}
-
 @Component({
   template: require('./list.html')
 })
