@@ -6,21 +6,12 @@ import {MutationTypes} from '../../../vuex/mutation-types/index';
   template: require('./list.html')
 })
 export class ListContainer extends Vue {
-
-
+   
   mounted() {
-    this.$nextTick(() => {
-      this.loadItems();
-    });
+    this.$store.dispatch(MutationTypes.LOAD_LIST);
   }
 
-  private loadItems() {
-    if (!this.items.length) {
-      this.axios.get(this.url).then((response: AxiosResponse) => {
-        this.items = response.data;
-      }, (error) => {
-        console.error(error);
-      });
-    }
+  get listItem() {
+    return this.$store.state.listItem;
   }
 }

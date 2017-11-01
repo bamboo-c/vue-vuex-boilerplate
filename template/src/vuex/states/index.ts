@@ -4,12 +4,12 @@
 export class State {
 
   public count: number;
-  public list: string[] 
+  public listItem: string[] 
 
   // state initializer
   constructor() {
     this.count = 0;
-    this.list = [''];
+    this.listItem = [''];
   }
 }
 
