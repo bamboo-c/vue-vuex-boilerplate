@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import actions from './actions/index';
-import getters from './getter/index';
+import getters from './getters/index';
 import mutations from './mutations/index';
 import state from './states/index';
 
