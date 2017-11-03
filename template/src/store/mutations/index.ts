@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import {MutationTree} from 'vuex';
 import {MutationTypes} from '../mutation-types/index';
 import {State} from '../states/index';
@@ -15,8 +16,14 @@ const mutations : MutationTree<State> = {
   },
 
   // list
-  [MutationTypes.LOAD_LIST]: (state: State) => {
-  
+  [MutationTypes.GET_LIST]: (state: State, {items}) => {
+    items.forEach(items => {
+      addList(state, items) 
+    }) 
+
+    function addList(state, items) {
+      Vue.set(state.items, items.id, items)
+    }
   }
 };
 

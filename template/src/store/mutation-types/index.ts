@@ -5,5 +5,5 @@ export class MutationTypes {
   public static RESET_VALUE = 'RESET_VALUE';
 
  // list
-  public static LOAD_LIST = 'LOAD_LIST';
+  public static GET_LIST = 'GET_LIST';
 }

@@ -8,7 +8,7 @@ import {MutationTypes} from '../../../store/mutation-types/index';
 export class ListContainer extends Vue {
    
   mounted() {
-    this.$store.dispatch(MutationTypes.LOAD_LIST);
+    this.$store.dispatch(MutationTypes.GET_LIST);
   }
 
   get listItem() {

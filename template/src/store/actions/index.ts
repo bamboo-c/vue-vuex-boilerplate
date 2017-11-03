@@ -1,6 +1,7 @@
 import {ActionTree} from 'vuex';
 import {MutationTypes} from '../mutation-types/index';
 import {State} from '../states/index';
+import * as listAPI from '../../api/listItems'
 
 
 const actions: ActionTree<State,State> = {
@@ -16,8 +17,12 @@ const actions: ActionTree<State,State> = {
   },
 
   // list
-  [MutationTypes.LOAD_LIST]: ({commit}) => {
-    commit(MutationTypes.LOAD_LIST);
+  [MutationTypes.GET_LIST]: ({commit}) => {
+    listAPI.getAllList(items => {
+      commit(MutationTypes.GET_LIST, {
+        items
+      })
+    })
   },
 };
 
