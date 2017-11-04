@@ -1,22 +1,22 @@
 module.exports = [
   {
     id: '0',
-    name: 'Bill',
+    name: 'spengler',
   },
   {
     id: '1',
-    name: 'Bill',
+    name: 'glinda',
   },
   {
     id: '2',
-    name: 'Bill',
+    name: 'Southgood',
   },
   {
     id: '3',
-    name: 'Bill',
+    name: 'komei',
   },
   {
     id: '4',
-    name: 'Bill',
+    name: 'otake',
   },
 ]
