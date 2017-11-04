@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import {MutationTree} from 'vuex';
-import {MutationTypes} from '../mutation-types/ListMutationTypes';
-import {State} from '../states/ListState';
+import {ListMutationTypes} from '../mutation-types/ListMutationTypes';
+import {listState} from '../states/listState';
 
-const ListMutations : MutationTree<State> = {
-  [MutationTypes.GET_LIST]: (state: State, {items}) => {
+const listMutations : MutationTree<listState> = {
+  [ListMutationTypes.GET_LIST]: (state: listState, {items}) => {
     items.forEach(items => {
       state.listItem.push({
         id: items.id,
@@ -14,4 +14,4 @@ const ListMutations : MutationTree<State> = {
   }
 };
 
-export default ListMutations;
+export default listMutations;

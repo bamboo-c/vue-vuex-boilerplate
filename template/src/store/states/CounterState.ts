@@ -6,5 +6,5 @@ export class CounterState {
   }
 }
 
-const CounterState = new CounterState();
-export default CounterState;
+const counterState = new CounterState();
+export default counterState;

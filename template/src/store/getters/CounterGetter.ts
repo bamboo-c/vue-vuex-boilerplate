@@ -1,9 +1,9 @@
 import {GetterTree} from 'vuex';
-import {State} from '../states/CounterState';
+import {counterState} from '../states/counterState';
 
 // State , RootState
-const CounterGetters : GetterTree<State,State> = {
+const counterGetters : GetterTree<counterState,counterState> = {
 
 };
 
-export default CounterGetters;
+export default counterGetters;

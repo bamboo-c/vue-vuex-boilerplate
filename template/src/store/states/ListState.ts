@@ -11,5 +11,5 @@ export class ListState {
   }
 }
 
-const ListState = new ListState();
-export default ListState;
+const listState = new ListState();
+export default listState;

@@ -1,18 +1,17 @@
 import {ActionTree} from 'vuex';
-import {ListMutationTypes} from '../mutation-types/ListMutationTypes';
-import {ListState} from '../states/ListState';
+import {ListMutationTypes} from '../mutation-types/listMutationTypes';
+import {listState} from '../states/listState';
 import * as listAPI from '../../api/listItems'
 
 
-const ListAction: ActionTree<State,State> = {
-
-  [MutationTypes.GET_LIST]: ({commit}) => {
+const listAction: ActionTree<listState,listState> = {
+  [ListMutationTypes.GET_LIST]: ({commit}) => {
     listAPI.getAllList(items => {
-      commit(MutationTypes.GET_LIST, {
+      commit(ListMutationTypes.GET_LIST, {
         items
       })
     })
   },
 };
 
-export default ListAction;
+export default listAction;

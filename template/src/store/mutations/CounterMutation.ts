@@ -1,18 +1,18 @@
 import Vue from 'vue';
 import {MutationTree} from 'vuex';
-import {MutationTypes} from '../mutation-types/CounterMutationTypes';
-import {State} from '../states/CounterState';
+import {CounterMutationTypes} from '../mutation-types/CounterMutationTypes';
+import {counterState} from '../states/counterState';
 
-const CounterMutation : MutationTree<State> = {
-  [MutationTypes.INCREMENT_VALUE]: (state: State) => {
+const counterMutation : MutationTree<counterState> = {
+  [CounterMutationTypes.INCREMENT_VALUE]: (state: counterState) => {
     state.count += 1;
   },
-  [MutationTypes.DECREMENT_VALUE]: (state: State) => {
+  [CounterMutationTypes.DECREMENT_VALUE]: (state: counterState) => {
     state.count -= 1;
   },
-  [MutationTypes.RESET_VALUE]: (state: State) => {
+  [CounterMutationTypes.RESET_VALUE]: (state: counterState) => {
     state.count = 0;
   },
 };
 
-export default CounterMutation;
+export default counterMutation;

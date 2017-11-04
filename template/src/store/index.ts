@@ -2,35 +2,42 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 // actions
-import CounterActions from './actions/counter';
-import ListActions from './actions/list';
+import counterAction from './actions/counterAction';
+import listAction from './actions/listAction';
 
 // getters
-import CounterGetters from './getters/counter';
-import ListGetters from './getters/list';
+import counterGetter from './getters/counterGetter';
+import listGetter from './getters/listGetter';
 
 // mutations
-import CounterMutations from './mutations/counter';
-import ListMutations from './mutations/list';
+import counterMutation from './mutations/counterMutation';
+import listMutation from './mutations/listMutation';
 
 // state
-import CounterState from './states/counter';
-import ListState from './states/list';
+import counterState from './states/counterState';
+import listState from './states/listState';
 
 Vue.use(Vuex);
 
-const CounterStore = new Vuex.Store({
-  CounterState,
-  CounterActions,
-  CounterMutations,
-  CounterGetters,
+const counter = {
+  state: counterState,
+  mutations: counterMutation,
+  actions: counterAction,
+  getter: counterGetter,
+}
+
+const list = {
+  state: listState,
+  mutations: listMutation,
+  actions: listAction,
+  getter: listGetter,
+}
+
+const store = new Vuex.Store({
+  modules: {
+    counter: counter,
+    list: list,
+  }
 });
 
-const ListStore = new Vuex.Store({
-  CounterState,
-  CounterActions,
-  CounterMutations,
-  CounterGetters,
-})
-
-export default CounterStore, ListStore;
+export default store;
