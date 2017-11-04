@@ -1,11 +1,10 @@
 import {ActionTree} from 'vuex';
-import {MutationTypes} from '../mutation-types/index';
-import {State} from '../states/index';
+import {CounterMutationTypes} from '../mutation-types/CounterMutationTypes';
+import {CounterState} from '../states/CounterState';
 import * as listAPI from '../../api/listItems'
 
 
-const actions: ActionTree<State,State> = {
-  // counter
+const CounterAction: ActionTree<State,State> = {
   [MutationTypes.INCREMENT_VALUE]: ({commit}) => {
     commit(MutationTypes.INCREMENT_VALUE);
   },
@@ -15,15 +14,6 @@ const actions: ActionTree<State,State> = {
   [MutationTypes.RESET_VALUE]: ({commit}) => {
     commit(MutationTypes.RESET_VALUE);
   },
-
-  // list
-  [MutationTypes.GET_LIST]: ({commit}) => {
-    listAPI.getAllList(items => {
-      commit(MutationTypes.GET_LIST, {
-        items
-      })
-    })
-  },
 };
 
-export default actions;
+export default CounterAction;
