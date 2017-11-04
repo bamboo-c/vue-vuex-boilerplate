@@ -4,12 +4,18 @@
 export class State {
 
   public count: number;
-  public listItem: string[] 
+  public listItem: [{
+    id: number;
+    name: string;
+  }];
 
   // state initializer
   constructor() {
     this.count = 0;
-    this.listItem = [''];
+    this.listItem = [{
+      id: 0,
+      name: 'list item',
+    }];
   }
 }
 

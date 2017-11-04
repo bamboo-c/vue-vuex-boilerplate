@@ -18,12 +18,11 @@ const mutations : MutationTree<State> = {
   // list
   [MutationTypes.GET_LIST]: (state: State, {items}) => {
     items.forEach(items => {
-      addList(state, items) 
+      state.listItem.push({
+        id: items.id,
+        name: items.name,
+      }); 
     }) 
-
-    function addList(state, items) {
-      Vue.set(state.items, items.id, items)
-    }
   }
 };
 
