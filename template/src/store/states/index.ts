@@ -1,21 +1,17 @@
 // root state object
 // each Vuex instance is just a single state tree.
+export interface ListItem {
+  id: number;
+  name: string;
+}
 
 export class State {
-
   public count: number;
-  public listItem: [{
-    id: number;
-    name: string;
-  }];
+  public listItem: ListItem[];
 
-  // state initializer
   constructor() {
     this.count = 0;
-    this.listItem = [{
-      id: 0,
-      name: 'list item',
-    }];
+    this.listItem = [];
   }
 }
 
