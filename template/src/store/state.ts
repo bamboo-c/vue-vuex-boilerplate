@@ -3,13 +3,15 @@ export interface ListItem {
   name: string;
 }
 
-export class ListState {
+export class State {
+  public count: number;
   public listItem: ListItem[];
 
   constructor() {
+    this.count = 0;
     this.listItem = [];
   }
 }
 
-const listState = new ListState();
-export default listState;
+const state = new State();
+export default state;

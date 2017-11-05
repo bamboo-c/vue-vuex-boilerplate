@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import {MutationTypes} from '../../../store/mutation-types/index';
+import {MutationTypes} from '../../../store/mutation-types/CounterMutationTypes';
 
 @Component({
   template: require('./counter.html'),
