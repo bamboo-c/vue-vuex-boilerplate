@@ -10,7 +10,6 @@ import { ListContainer } from '../components/containers/List/';
 import { Navbar } from '../components/modules/Navbar/';
 
 // ui
-import { Button } from '../components/ui/Button/';
 
 // register the plugin
 Vue.use(VueRouter);
