@@ -1,40 +1,103 @@
 # vue-vuex-boilerplate
 
-Vue 2, Vuex, Webpack 3 and Typescript 2 setup setting.
+Vue 2, Vuex, Webpack 3 and Typescript 2 starter boilerplate.
 
-## Build Setup
+## used
 
-``` bash
-# install dependencies
-yarn install
+- Vue 2
+- Vuex
+- vue-router
+- Webpack 3
+- TypeScript 2
+- karma
+- sass
 
-# serve with hot reload at localhost:8080
-yarn run dev
+## file stlucture
 
-# lint the Typescript
-yarn run lint
+```
+template
+│   karma configs
+│   package.json
+│   README.md
+│   tsconfig.json
+│   webpack.config.json // import config/
+│   yarn.lock
+│
+└───config
+│       // webpack settings
+│       ...
+│
+└───environment
+│       dev.env.js
+│       prod.env.js
+│
+└───node_modules
+│       // nodo modules
+│       ...
+│
+└───static
+│       favicon.ico
+│
+└───src
+    │   index.html
+    │   main.ts
+    │   test.ts
+    │
+    └───api
+    │      api mock data
+    └───assets
+    │   └───images
+    │          // project images
+    │          ...
+    │
+    └───components
+    │   └───container
+    │   │      // container
+    │   │      ...
+    │   │
+    │   └───modules
+    │   │      // modules
+    │   │      ...
+    │   │
+    │   └───ui
+    │          // ui
+    │          ...
+    └───router
+    │     index.ts
+    │
+    └───store
+    │     index.ts
+    │     actions.ts
+    │     getters.ts
+    │     mutation-types.ts
+    │     mutation.ts
+    │     state.ts
+    │
+    └───styles
+    │   │   main.scss
+    │   │
+    │   └───common
+    │   │      // common styles
+    │   │      ...
+    │   │
+    │   └───components
+    │   │      └───container
+    │   │      │      // containers styles
+    │   │      │      ...
+    │   │      │
+    │   │      └───modules
+    │   │      │      // modules styles
+    │   │      │      ...
+    │   │      │
+    │   │      └───ui
+    │   │             // ui styles
+    │   │             ...
+    │   │
+    │   └───foundation
+    │          _normalize.scss
+    │   
+    └───utils
+            component-test.ts
+            log.ts
 
-# run the tests
-yarn test
-
-# run the tests on changes
-yarn run test:watch
-
-# run the tests on Teamcity
-yarn run ci:teamcity
-
-# run the tests on Jenkins
-yarn run ci:jenkins
-
-# build for production with minification
-yarn run build
-
-# watch css
-yarn run css:watch
-
-# build css
-yarn run css:build
-
-# clean the production build
-yarn run clean
 ```
