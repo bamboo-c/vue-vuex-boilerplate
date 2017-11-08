@@ -6,7 +6,7 @@ import {MutationTypes} from '../../../store/mutation-types';
   template: require('./list.html')
 })
 export class ListContainer extends Vue {
-   
+
   mounted() {
     this.$store.dispatch(MutationTypes.GET_LIST);
   }
