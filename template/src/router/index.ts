@@ -16,19 +16,21 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
-  routes: [{
-    component: AppContainer,
-    name: 'index',
-    path: '/',
-  }, {
-    component: CounterContainer,
-    name: 'counter',
-    path: '/counter',
-  }, {
-    component: ListContainer,
-    name: 'list',
-    path: '/list',
-  },],
+  routes: [
+    {
+      component: AppContainer,
+      name: 'index',
+      path: '/',
+    }, {
+      component: CounterContainer,
+      name: 'counter',
+      path: '/counter',
+    }, {
+      component: ListContainer,
+      name: 'list',
+      path: '/list',
+    },
+  ],
 });
 
 export default router;

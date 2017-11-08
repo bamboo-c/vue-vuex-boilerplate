@@ -19,4 +19,4 @@ module.exports = [
     id: '4',
     name: 'otake',
   },
-]
+];

@@ -1,5 +1,5 @@
-const data = require('./mock-data-list')
+const data = require('./mock-data-list');
 
 export function getAllList (cb) {
-  cb(data)
+  cb(data);
 }
