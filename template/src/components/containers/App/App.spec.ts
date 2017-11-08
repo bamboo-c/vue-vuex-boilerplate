@@ -15,7 +15,7 @@ describe('Home component', () => {
       debugger;
       const mode = process.env.ENV;
       expect(vm.$el.querySelector('.mode').textContent).to.equal(`${mode} mode`);
-      expect(vm.$el.querySelector('.package').textContent).to.equal('vue-webpack-typescript');
+      expect(vm.$el.querySelector('.package').textContent).to.equal('vue-vuex-boillerplate');
     });
   });
 });
