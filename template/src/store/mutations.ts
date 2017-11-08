@@ -15,12 +15,14 @@ const mutations : MutationTree<State> = {
   },
 
   [MutationTypes.GET_LIST]: (state: State, {items}) => {
-    items.forEach(items => {
-      state.listItem.push({
-        id: items.id,
-        name: items.name,
-      }); 
-    }) 
+    if (state.listItem.length === 0) {
+      items.forEach(items => {
+        state.listItem.push({
+          id: items.id,
+          name: items.name,
+        }); 
+      }) 
+    }
   }
 };
 
