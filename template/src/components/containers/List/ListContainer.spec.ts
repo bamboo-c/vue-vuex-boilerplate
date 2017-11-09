@@ -9,7 +9,11 @@ import { ListContainer } from './';
 class MockListComponent extends ListContainer {
   constructor() {
     super();
-    return { listItem: [{ name: 'test 1' }, { name: 'test 2' }, { name: 'test 3' }] };
+  }
+
+  accessor() {
+    this.$store.state.listItem.concat([{ id: 0, name: 'test 1' }, { id: 1, name: 'test 2' }, { id: 2, name: 'test 3' }]);
+    return this.$store.state.listItem;
   }
 }
 
