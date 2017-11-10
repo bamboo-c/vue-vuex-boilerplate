@@ -7,14 +7,11 @@ import {State} from '../../../store/state'
   template: require('./list.html')
 })
 export class ListContainer extends Vue {
-  listItems: State.listItem = [];
-
   mounted() {
     this.$store.dispatch(MutationTypes.GET_LIST);
   }
 
   get listItem() {
-    this.listItems = this.$store.state.listItem;
-    return this.listItems;
+    return this.$store.state.listItem;
   }
 }
