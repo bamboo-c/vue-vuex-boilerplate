@@ -8,25 +8,34 @@ import { ComponentTest } from '../../../utils/component-test';
 })
 class MockCounterComponent extends CounterContainer {
   constructor() {
-    super()
+    super();
   }
 }
 
 describe('Counter component', () => {
   let directiveTest: ComponentTest;
 
-  beforeEach(async () => {
-    directiveTest = new ComponentTest('<div><counter></counter></div>', { 'app': MockCounterComponent });
+  before(() => {
+    directiveTest = new ComponentTest('<div><counter></counter></div>', { 'counter': MockCounterComponent });
+  })
 
-    await directiveTest.execute((vm) => {
-      let anchor = <HTMLAnchorElement>vm.$el.querySelector('.btn-success');
-      anchor.click();
-    });
-  });
+  describe('click simuration', () => {
+    beforeEach(async () => {
+      directiveTest.createComponent();
 
-  it('should render correct contents', async () => {
-    await directiveTest.execute((vm) => {
-      expect(vm.$el.querySelector('.lead').textContent).to.equal('2');
+      await directiveTest.execute((vm) => {
+        const incrementButton = <HTMLButtonElement>vm.$el.querySelector('.btn-success');
+        const clickEvent = new window.Event('click');
+        incrementButton.dispatchEvent(clickEvent);
+        vm._watcher.run();
+      }) 
     });
-  });
+
+    it('should render correct contents', async () => {
+      await directiveTest.execute((vm) => {
+        expect(vm.$el.querySelector('.lead').textContent).to.equal('2');
+      });
+    });
+  
+  })
 });
