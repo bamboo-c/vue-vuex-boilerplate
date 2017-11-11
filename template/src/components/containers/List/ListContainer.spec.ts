@@ -2,6 +2,7 @@ import Component from 'vue-class-component';
 import { expect } from 'chai';
 import { ComponentTest } from '../../../utils/component-test';
 import { ListContainer } from './';
+import store from '../../../store/'; 
 
 @Component({
   template: require('./list.html')
@@ -24,7 +25,7 @@ describe('List component', () => {
 
     await directiveTest.execute((vm) => { // ensure Vue has bootstrapped/run change detection
       debugger;
-      expect(vm.$el.querySelectorAll('.container ul li').length).to.equal(2);
+      expect(vm.$el.querySelectorAll('.container ul li').length).to.equal(store.state.listItem.length);
     });
   });
 });
