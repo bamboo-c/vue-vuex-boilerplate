@@ -1,19 +1,32 @@
+import Component from 'vue-class-component';
 import { expect } from 'chai';
 import { CounterContainer } from './';
 import { ComponentTest } from '../../../utils/component-test';
 
-describe('Home component', () => {
+@Component({
+  template: require('./counter.html')
+})
+class MockCounterComponent extends CounterContainer {
+  constructor() {
+    super()
+  }
+}
+
+describe('Counter component', () => {
   let directiveTest: ComponentTest;
 
-  beforeEach(() => {
-    directiveTest = new ComponentTest('<div><counter></counter></div>', { 'app': CounterContainer });
+  beforeEach(async () => {
+    directiveTest = new ComponentTest('<div><counter></counter></div>', { 'app': MockCounterComponent });
+
+    await directiveTest.execute((vm) => {
+      let anchor = <HTMLAnchorElement>vm.$el.querySelector('.btn-success');
+      anchor.click();
+    });
   });
 
   it('should render correct contents', async () => {
-    directiveTest.createComponent();
     await directiveTest.execute((vm) => {
-      debugger;
-
+      expect(vm.$el.querySelector('.lead').textContent).to.equal('2');
     });
   });
 });
