@@ -5,10 +5,10 @@ Vue 2, Vuex, Webpack 3 and Typescript 2 starter boilerplate.
 ## Usage
 ```
 $ npm install -g vue-cli
-$ vue init ducksoupdev/vue-webpack-typescript my-project
+$ vue init bamboo-c/vue-vuex-boilerplate my-project
 $ cd my-project
-$ npm install
-$ npm run dev
+$ yarn install
+$ yarn run dev
 ```
 
 ## Used
