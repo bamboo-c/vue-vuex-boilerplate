@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import {MutationTypes} from '../../../store/mutation-types';
-import {State} from '../../../store/state'
+import {State} from '../../../store/state';
 
 @Component({
   template: require('./list.html')
